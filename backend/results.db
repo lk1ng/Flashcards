@@ -1,0 +1,7 @@
+CREATE TABLE flashcards (
+    id INTEGER PRIMARY KEY,
+    word TEXT NOT NULL,
+    correct_count INTEGER DEFAULT 0,
+    wrong_count INTEGER DEFAULT 0,
+    difficulty INTEGER DEFAULT 0
+);

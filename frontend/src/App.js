@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import background from "./images/madrid.jpg"
 import Flashcard from "./Flashcard.js"
 
+const APP_URL = 'http://127.0.0.1:8000/';
 
 const App = () => {
   const [data, setData] = useState(null);
@@ -17,7 +18,7 @@ const App = () => {
     
   useEffect(() => {
     console.log("Fetching data...");
-    fetch('http://127.0.0.1:8000/definitions')
+    fetch(APP_URL + 'definitions')
       .then(response => {
         console.log("Response received", response);
         return response.json();
@@ -126,7 +127,7 @@ const App = () => {
       if (!information) {
         console.log("information is null");
         const encodedWord = encodeURIComponent(word);
-        fetch(`https://www.dictionaryapi.com/api/v3/references/spanish/json/${encodedWord}?key=dda17aa1-b518-41cb-88f6-284214d521f9`)
+        fetch(APP_URL + 'dictionary?word=' + encodedWord)
             .then(response => response.json())
             .then(data => {
                 console.log(data);
