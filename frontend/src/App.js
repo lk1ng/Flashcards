@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import background from "./images/madrid.jpg"
 import Flashcard from "./Flashcard.js"
 
-const APP_URL = 'http://127.0.0.1:8000/';
+const APP_URL = 'https://flashcards-vw9p.onrender.com/';
 
 const App = () => {
   const [data, setData] = useState(null);
