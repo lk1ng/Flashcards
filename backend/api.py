@@ -26,8 +26,7 @@ def read_vocab():
     return [palabras, definitions]
 
 origins = {
-    "http://localhost:3001",
-    "https://localhost:3001"
+    "https://flashcards-r533.onrender.com"
 }
 
 app.add_middleware(
